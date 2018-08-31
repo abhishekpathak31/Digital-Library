@@ -5,7 +5,7 @@
 4. Open XAMPP -> start Apache -> start MySQL
 5. Open BROWSER goto   http://localhost/phpmyadmin/
 6. Create the SQL file using the data given in the docx file or simply import the library.sql file
-7. Run the Program     localhost/modules/librarylog.php
+7. Run the Program     localhost/FOLDER_NAME/librarylog.php
 
 
 
