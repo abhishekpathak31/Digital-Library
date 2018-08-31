@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<script type="text/javascript">
+        function validate()
+		{
+		if(document.forms["myForm"]["regno"].value=="")
+			{
+				alert("Please fill your User Name!");
+				return false;
+			}
+			if(document.forms["myForm"]["uname"].value=="")
+			{
+				alert("Please fill your User Name!");
+				return false;
+			}
+			if(document.forms["myForm"]["cpwd"].value=="")
+			{
+				alert("Please fill your User Description!");
+				return false;
+			}
+			if(document.forms["myForm"]["pwd"].value=="")
+			{
+				alert("Please fill your Password!");
+				return false;
+			}
+			if(document.forms["myForm"]["pwd"].value.length<4)
+			{
+				alert("Password length should be minimum 4!");
+				return false;
+			}
+			if(document.forms["myForm"]["typ"].value=="")
+			{
+				alert("Please fill your User Type!");
+				return false;
+			}
+			if(document.forms["myForm"]["gender"].value=="")
+			{
+				alert("Please select your Gender!");
+				return false;
+			}
+			if(document.forms["myForm"]["dept"].value=="")
+			{
+				alert("Please select your Department!");
+				return false;
+			}
+			if(document.forms["myForm"]["email"].value=="")
+			{
+				alert("Please fill your Email ID!");
+				return false;
+			}
+			var x = document.forms["myForm"]["email"].value;
+			var atpos = x.indexOf("@");
+			var dotpos = x.lastIndexOf(".");
+			if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+			alert("Please fill a valid E-mail ID");
+			return false;
+			}
+			if(document.forms["myForm"]["mobile"].value=="")
+			{
+				alert("Please fill your Mobile Number!");
+				return false;
+			}
+			if(document.forms["myForm"]["mobile"].value.length!=10)
+			{
+				alert("Please enter a 10-digit Mobile Number!");
+				return false;
+			}
+			if(document.forms["myForm"]["lbname"].value=="")
+			{
+				alert("Please fill your Library Name!");
+				return false;
+			}
+		}
+      </script>
+ </head>
+<body topmargin=0 style="background-image:url(4.jpg);  background-size: 1300px;">
+    <div>
+		<div>
+			
+			<h1 align="center" style="color:#953308;"><span style="background-color:gold;"><b>Online Library System</b></span></h1>
+		</div>
+		<br><br>
+		<center>
+        <div align="center" style="background-color:gold; width:350px; height:410px ;color:#953308;">
+		
+			<h2 align="center" >New User</h2>
+                <form name="myForm" action='SaveNewUser.php' onsubmit="return validate()" method='POST'>
+				<table align="left" border="0" cellspacing="4" cellpadding="4" align="center">
+					<tr><td><b>User ID:</b></td><td><input type="text" name="regno" ></td></tr>
+					<tr><td><b>User Name:</b></td><td><input type="text" name="uname" ></td></tr>
+					<tr><td><b>User Description:</b></td><td><input type="text" name="cpwd" ></td></tr>
+					<tr><td><b>Password:</b></td><td><input type="password" name="pwd" ></td></tr>
+					<tr><td><b>User Type:</b></td><td><input type="text" name="typ" ></td></tr>
+					<tr><td><b>Gender:</b></td><td><input type="radio" name="gender" value="Male">Male<input type="radio" name="gender" value="Female" >Female</td></tr>
+					<tr><td><b>Department:</b></td><td><select name="dept" ><option>IT</option><option>CSE</option><option>SWE</option><option>ECE</option></td></tr>
+					<tr><td><b>E-mail Id:</b></td><td><input type="text" name="email" ></tr>
+					<tr><td><b>Mobile No:</b></td><td><input type="text" name="mobile"></tr>
+					<tr><td><b>Library Name:</b></td><td><input type="text" name="lbname" ></td></tr>
+					<tr><td></td><td><input type="submit" value=" Submit " name="btnsubmit"></td></tr><a href="lib.html"></a>
+				</table>
+				</form>
+                </div>
+			</div>
+			
+        <div>
+		</center>
+        	
+			<p align="center" style="color:white;" > &copy Abhishek Pathak (RA1511008010274); </p>
+        </div>
+</body>
+</html>
